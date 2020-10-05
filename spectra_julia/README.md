@@ -1,1 +1,2 @@
-jupyter notebook in Julia. Plotting script for the "Energy Plots" in final_plot.pdf
+A Jupyter notebook in Julia. 
+The script generates the subplots in the "Energy Plots" of final_plot.pdf, by analyzing simulation data
