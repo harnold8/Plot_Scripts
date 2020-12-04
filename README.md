@@ -5,6 +5,11 @@
  folder **trajectories_matlab**
  ![](trajectories_matlab/trajectories.png)
  
+ ## Python script to process and visualize compressed .silo files
+ folder **python_script**
+ ![](python_script/example.png)
+ 
+ 
  ## Julia script to compare magnetic field data from the Galileo spacecraft vs simulations
   folder **mag_julia**
   ![](mag_julia/mag1.png)
