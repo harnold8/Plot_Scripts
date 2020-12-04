@@ -1,0 +1,167 @@
+% LATEX Dokument für die Diplomarbeit
+% Header
+\documentclass[pdftex]{scrartcl}
+% Seitengröße
+\usepackage{typearea}
+
+\usepackage{plotdata_latex}
+
+% \areaset{30cm}{28.5cm}
+% \setlength{\paperwidth}{11cm}
+% % \setlength{\paperheight}{14.5cm}
+% % \areaset{10cm}{14.5cm}
+% \setlength{\paperheight}{28.5cm}
+% Seitenlayout
+% Farbe
+\usepackage{color}
+% Deutsch
+\usepackage[utf8]{inputenc}
+% Schrifttyp
+\usepackage{mathptmx}
+\usepackage[scaled=1.50]{helvet}
+\usepackage{courier}
+% Absätze
+\setlength{\parindent}{0cm} 
+\setlength{\parskip}{3mm}
+% Grafikpaket
+\usepackage{graphicx}
+\usepackage[FIGTOPCAP,nooneline, large]{subfig}
+% \usepackage{floatflt}
+% Mathematsche Formeln
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{array}
+
+% Fancybox
+\usepackage{fancybox}
+
+% BEFEHLE
+\newcommand{\vek}[1]{\underline{#1}}
+\newcommand{\mat}[1]{\underline{\underline{#1}}}
+\newcommand{\vx}{\vek{x}}
+\newcommand{\dvx}{d\vek{x}}
+% \newcommand{\grad}{{\rm grad}\,}
+% \newcommand{\dif}{{\rm div}\,}
+% \newcommand{\rot}{{\rm rot}\,}
+\newcommand{\grad}{\nabla}
+\newcommand{\dif}{\nabla \cdot}
+\newcommand{\rot}{\nabla \times}
+\newcommand{\colvek}[3]{
+  \left(
+    \begin{array}{c}
+      #1 \\ #2 \\ #3
+    \end{array}
+  \right) }
+\newcommand{\minkvek}[4]{
+  \left(
+    \begin{array}{c}
+      #1 \\ #2 \\ #3 \\ #4
+    \end{array}
+  \right) }
+\newcommand{\oiint}{\iint}
+\newcommand{\es}[1]{\tilde{\vek{e}}_#1}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\vA}{\vek{A}}
+\newcommand{\vD}{\vek{D}}
+\newcommand{\vE}{\vek{E}}
+\newcommand{\vH}{\vek{H}}
+\newcommand{\vF}{\vek{F}}
+\newcommand{\vB}{\vek{B}}
+\newcommand{\vM}{\vek{M}}
+\newcommand{\vK}{\vek{K}}
+\newcommand{\vL}{\vek{L}}
+\newcommand{\vR}{\vek{R}}
+\newcommand{\vS}{\vek{S}}
+\newcommand{\vU}{\vek{U}}
+\newcommand{\ve}{\vek{e}}
+\newcommand{\vj}{\vek{j}}
+\newcommand{\vk}{\vek{k}}
+\newcommand{\vm}{\vek{m}}
+\newcommand{\vn}{\vek{n}}
+\newcommand{\vp}{\vek{p}}
+\newcommand{\vr}{\vek{r}}
+\newcommand{\vu}{\vek{u}}
+\newcommand{\vv}{\vek{v}}
+\newcommand{\vw}{\vek{w}}
+\newcommand{\dtv}{\vek{\dot{v}}}
+\newcommand{\dtr}{\vek{\dot{r}}}
+\newcommand{\dtx}{\vek{\dot{x}}}
+\newcommand{\cph}{c_{\rm Ph}}
+\newcommand{\epst}{\mat{\varepsilon}}
+\newcommand{\mut}{\mat{\mu}}
+\newcommand{\pt}{\partial_t}
+\newcommand{\px}{\partial_x}
+\newcommand{\pxx}{\partial_{\vx}}
+\newcommand{\ppara}{\partial_{\parallel}}
+\newcommand{\psenk}{\partial_{\perp}}
+\newcommand{\pvv}{\partial_{\vv}}
+\newcommand{\pr}{\partial_r}
+\newcommand{\ereig}{\mathcal{E}}
+\newcommand{\rgam}{\sqrt{1-v^{2}/c^{2}}}
+\newcommand{\I}{\rm I}
+\newcommand{\II}{\rm II}
+\newcommand{\Ls}{{L_{\rm S}}}
+\newcommand{\mLs}{{\mat{L}_{\rm S}}}
+
+\renewcommand{\figurename}{Fig.} 
+
+% \newcommand{\length}{7cm}
+% \newcommand{\lengthPaper}{7.5cm}
+% \newcommand{\heightPaper}{8cm}
+% 
+% 
+% \setlength{\paperwidth}{\lengthPaper}
+% \setlength{\paperheight}{\heightPaper}
+% \areaset{\length}{\length}
+
+
+\begin{document}
+
+
+\begin{figure}
+	\centering
+	\begin{picture}(0,0)%
+% 		\includegraphics[width=7cm]{Enceladus_B0000.png}%
+		\input{plotdata_latex.tex}
+	\end{picture}%
+	\setlength{\unitlength}{7cm}%
+	%
+	\begingroup\makeatletter\ifx\SetFigFont\undefined%
+	\gdef\SetFigFont#1#2#3#4#5{%
+	\reset@font\fontsize{#1}{#2pt}%
+	\fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+	\selectfont}%
+	\fi\endgroup%
+	\begin{picture}(1,1.02)(0.15,-1.0)
+		\put(\xlabelpos,-0.975){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{16}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\textbf{\xlabel}}%
+		}}}}
+		\put(0.15,-0.06){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{16}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\textbf{\ylabel}}%
+		}}}}
+%		\put(\unitxpos,-0.045){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{16}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\textbf{\unit}}%
+		\put(0.80,-0.045){\makebox(0,0)[lb]{\smash{{\SetFigFont{16}{16}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\textbf{\unit}}%
+		}}}}
+	\end{picture}%
+\end{figure}
+
+
+% \section*{Tests for Neutral Drag and Ionization}
+% \pagestyle{empty}
+% \vspace{1cm}
+%  \begin{figure}[!h]
+%   \centering
+% \vspace{1cm}
+% % \vspace{-1.5cm}
+% \input{plotdata_latex.tex}
+%  \end{figure}
+% \begin{tabular}
+% % \begin{center}
+% % use packages: array
+% \begin{tabular}{lll}
+% \input{plotdata_latex.tex}
+% \end{tabular}
+% % \end{center}
+% \end{tabular} 
+
+\end{document}
